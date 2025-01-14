@@ -70,12 +70,12 @@ const startTime = new Date();
 
 game.addEventListener("click", (event) => {
     clicks++;
-    console.log(clicks, matches);
     event.target.previousElementSibling.classList.add("open");
 
     if (event.target.classList.contains("front")) {
         event.target.classList.remove("front");
         event.target.classList.add("flip");
+        event.target.previousElementSibling.classList.add("flip");
 
         opened.push(event.target.previousElementSibling.className);
 
@@ -94,6 +94,7 @@ game.addEventListener("click", (event) => {
                             item.classList.remove("open");
 
                             item.nextElementSibling.classList.remove("flip");
+                            item.classList.remove("flip");
                             item.nextElementSibling.classList.add("front");
                         }
                     });
