@@ -62,3 +62,15 @@ header {
 #game > div > div > .front {
     transform: rotateY(360deg);
 }
+
+#reset {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+
+    button {
+        padding: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+}

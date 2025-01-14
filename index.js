@@ -18,6 +18,7 @@ const icons = [
 ];
 
 const game = document.querySelector("#game > div");
+const resetBtn = document.getElementById("reset");
 
 function appentTile(icon) {
     const tile = document.createElement("div");
@@ -66,7 +67,7 @@ hydrateBoard();
 let opened = [];
 let clicks = 0;
 let matches = 0;
-const startTime = new Date();
+let startTime = new Date();
 
 game.addEventListener("click", (event) => {
     clicks++;
@@ -145,4 +146,13 @@ game.addEventListener("click", (event) => {
             }
         }
     }
+});
+
+resetBtn.addEventListener("click", () => {
+    game.innerHTML = "";
+    hydrateBoard();
+    opened = [];
+    clicks = 0;
+    matches = 0;
+    startTime = new Date();
 });
