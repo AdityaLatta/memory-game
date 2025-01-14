@@ -18,7 +18,7 @@ const icons = [
 ];
 
 const game = document.querySelector("#game > div");
-const resetBtn = document.getElementById("reset");
+const resetBtn = document.querySelector("#reset > button");
 
 function appentTile(icon) {
     const tile = document.createElement("div");
